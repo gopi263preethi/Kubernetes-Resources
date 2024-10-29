@@ -8,3 +8,5 @@ spec:
   - containers:
       image: httpd
       containerPort: 80 
+
+#### This is sample pod configuration file for the saving purpose
