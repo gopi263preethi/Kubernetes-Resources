@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-ingress     # Name of the ingress resource
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /  # Rewrite target for path-based routing
+spec:
+  rules:
+    - host: example.com  # Domain name for routing (optional)
+      http:
+        paths:
+          - path: /       # Path for the rule
+            pathType: Prefix
+            backend:
+              service:
+                name: my-service  # Name of the backend service
+                port:
+                  number: 80      # Service port
+  
