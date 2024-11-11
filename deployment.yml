@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: gopinadh789/java-based-app:v1
+        imageName: gopinadh789/java-based-app:v1
         ports:
         - containerPort: 80
